@@ -90,6 +90,7 @@ function Home() {
       return;
     }
     // Trigger the mutation to fetch data using the email
+        // @ts-ignore
     mutation.mutate({ email });
   };
 
@@ -121,6 +122,7 @@ function Home() {
               <div className="flex flex-wrap justify-center gap-6">
                 <div
                   className={`submitDiv relative cursor-pointer ${isEmailEmpty || !isEmailValid ? 'opacity-50 pointer-events-none' : ''}`}
+                      // @ts-ignore
                   onClick={() => handleSubmit(new Event("submit"))} 
                 >
                   <span className="absolute top-0 left-0 mt-1 ml-1 h-full w-full rounded bg-gray-700" />
